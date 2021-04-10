@@ -71,15 +71,30 @@ def pref_none(): #if person on website doesn't have choice
             curr_center = VacCen.index(i) + 1 
     return(VacCen[curr_center - 1]) 
 
-type_Vac = input("Which vaccine provider do you prefer? ")
+hola = input()
+vaccine_type = hola
+if vaccine_type == "Pfizer":
+    location = pref_P()
+elif vaccine_type == "Moderna":
+    location = pref_M() 
+elif vaccine_type == "Johnson & Johnson":
+    location = pref_JJ() 
+elif vaccine_type == "No Preference":
+    location = pref_none() 
+    
+location = location.split()[1:]
+count = 0
+for i in location:
+    try:
+        int(i) 
+        count = location.index(i) 
+        break
+    except: 
+        continue
 
-if type_Vac.lower() == "pfizer":
-    print(pref_P())
-elif type_Vac.lower() == "moderna":
-    print(pref_M())
-elif type_Vac.lower() == "Johnson & Johnson":
-    print(pref_JJ()) 
-elif type_Vac.lower() == "no preference":
-    print(pref_none()) 
+location_name = location[0:count] 
+location_address = location[count:]
+
+
     
 
