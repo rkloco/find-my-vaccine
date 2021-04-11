@@ -39,11 +39,6 @@ def zip():
     for i in zip_list:
         num_JJ[i] = random.randint(300, 899) 
 
-    centerID = "13"
-    vaccine_total = 2000
-    pfizer_total = 2000
-    moderna_total = 2000
-    jj_total = 2000
     for i in zip_list:
         if i.split()[0] == (centerID + "."): 
             num_doses[i] = vaccine_total
@@ -120,9 +115,6 @@ def zip():
     location_name = " ".join(location_name)
     location_address = " ".join(location_address) 
 
-    print(location_name)
-    print(location_address) 
-
 if len(zip_list) >= 1:
     zip() 
 else:
@@ -151,11 +143,6 @@ else:
     for i in VacCen:
         num_JJ[i] = random.randint(300, 899) 
 
-    centerID = "23"
-    vaccine_total = 2000
-    pfizer_total = 150
-    jj_total = 2000
-    moderna_total = 0
     for i in VacCen:
         if i.split()[0] == (centerID + "."): 
             num_doses[i] = vaccine_total
@@ -231,9 +218,6 @@ else:
 
     location_name = " ".join(location_name)
     location_address = " ".join(location_address) 
-
-    print(location_name)
-    print(location_address) 
 
 
 
