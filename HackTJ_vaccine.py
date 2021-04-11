@@ -71,7 +71,8 @@ def pref_none(): #if person on website doesn't have choice
             curr_center = VacCen.index(i) + 1 
     return(VacCen[curr_center - 1]) 
 
-hola = input()
+
+hola = input() 
 vaccine_type = hola
 if vaccine_type == "Pfizer":
     location = pref_P()
@@ -81,7 +82,7 @@ elif vaccine_type == "Johnson & Johnson":
     location = pref_JJ() 
 elif vaccine_type == "No Preference":
     location = pref_none() 
-    
+
 location = location.split()[1:]
 count = 0
 for i in location:
@@ -94,6 +95,11 @@ for i in location:
 
 location_name = location[0:count] 
 location_address = location[count:]
+
+location_name = " ".join(location_name)
+location_address = " ".join(location_address) 
+
+
 
 
     
